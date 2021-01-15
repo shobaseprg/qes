@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/index', 'questionController@index');
+Route::get('/', function () {
+    return view('welcome');
+});
