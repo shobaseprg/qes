@@ -17,6 +17,7 @@ class Respondent extends Model
         $respondent->sex = $request->sex;
         $respondent->other = $request->other;
         $respondent->save();
+        return $respondent;
     }
 
     protected $fillable = [

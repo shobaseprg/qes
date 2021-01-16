@@ -31,7 +31,9 @@ class respondentController extends Controller
 
     public function store(Request $request)
     {
-        Respondent::saveRespondent($request);
-        // Wish::saveWish($request);
+        $respondent = Respondent::saveRespondent($request);
+        Wish::saveWish($request->status, $respondent->id);
+
+        return view('respondent.v_responseMessage');
     }
 }
