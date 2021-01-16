@@ -9,6 +9,14 @@ class Respondent extends Model
 {
     use HasFactory;
 
+    public static $validate_rule = [
+        "name" => "required",
+        "age" => "required",
+        "sex" => "required",
+        "status" => "required",
+        "other" => "required",
+    ];
+
     public static function saveRespondent($request)
     {
         $respondent = new Respondent();

@@ -31,6 +31,18 @@ class respondentController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate(
+            $request,
+            Respondent::$validate_rule,
+            [
+                "name.required" => "名前が未入力です",
+                "age.required" => "年齢が未入力です",
+                "sex.required" => "性別が未入力です",
+                "status.required" => "希望物件が未入力です",
+                "other.required" => "その他ご要望が未入力です"
+            ]
+        );
+
         $respondent = Respondent::saveRespondent($request);
         Wish::saveWish($request->status, $respondent->id);
 
