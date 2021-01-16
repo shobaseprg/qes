@@ -33,10 +33,10 @@
   @endif
 
   <p>希望物件<br />
-    <label><input type="checkbox" name="status[]" value=1>新築一戸建て</label><br />
-    <label><input type="checkbox" name="status[]" value=2>中古一戸建て</label><br />
-    <label><input type="checkbox" name="status[]" value=3>マンション</label><br />
-    <label><input type="checkbox" name="status[]" value=4>土地</label><br />
+    <label><input type="checkbox" name="status[]" value=1 {{ in_array(1, old('status')) ? 'checked' : '' }}>新築一戸建て</label><br />
+    <label><input type="checkbox" name="status[]" value=2 {{ in_array(2, old('status')) ? 'checked' : '' }}>中古一戸建て</label><br />
+    <label><input type="checkbox" name="status[]" value=3 {{ in_array(3, old('status')) ? 'checked' : '' }}>マンション</label><br />
+    <label><input type="checkbox" name="status[]" value=4 {{ in_array(4, old('status')) ? 'checked' : '' }}>土地</label><br />
   </p>
 
   @if ($errors->has('other'))
