@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Respondent;
+use App\Models\Wish;
 use App\Http\Controllers\modules\SplitClass;
 
 class respondentController extends Controller
@@ -21,5 +22,16 @@ class respondentController extends Controller
         $sexClass = SplitClass::checkSex($targetRespondent->sex);
         $wishClassArray = SplitClass::checkWish($targetRespondent->wishes()->get());
         return view('respondent.v_show', compact('targetRespondent', 'ageClass', 'sexClass', 'wishClassArray'));
+    }
+
+    public function create()
+    {
+        return view('respondent.v_create');
+    }
+
+    public function store(Request $request)
+    {
+        Respondent::saveRespondent($request);
+        // Wish::saveWish($request);
     }
 }

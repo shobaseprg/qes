@@ -17,3 +17,5 @@ use App\Http\Controllers\respondentController;
 
 Route::get('/', [respondentController::class, 'index']);
 Route::get('/show/{user_id}', [respondentController::class, 'show']);
+Route::get('/create', [respondentController::class, 'create']);
+Route::post('/store', [respondentController::class, 'store']);

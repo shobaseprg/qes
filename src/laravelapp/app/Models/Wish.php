@@ -9,6 +9,10 @@ class Wish extends Model
 {
     use HasFactory;
 
+    public static function saveWish()
+    {
+    }
+
     public function respondent()
     {
         return $this->belongsTo('App\Models\Respondent');
