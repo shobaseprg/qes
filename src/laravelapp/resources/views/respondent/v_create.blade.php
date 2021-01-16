@@ -6,17 +6,17 @@
   @endif
 
   nama<br />
-  <input type="text" name="name"><br />
+  <input type="text" name="name" value="{{ old('name') }}"><br />
 
   @if ($errors->has('age'))
   {{$errors->first('age')}}
   @endif
 
   <p>年齢<br />
-    <label><input type="radio" name="age" value=1>20歳未満</label><br />
-    <label><input type="radio" name="age" value=2>20歳〜39歳</label><br />
-    <label><input type="radio" name="age" value=3>40歳〜59歳</label><br />
-    <label><input type="radio" name="age" value=4>60歳以上</label><br />
+    <label><input type="radio" name="age" value=1 {{ old('age') == 1 ? 'checked' : '' }}>20歳未満</label><br />
+    <label><input type="radio" name="age" value=2 {{ old('age') == 2 ? 'checked' : '' }}>20歳〜39歳</label><br />
+    <label><input type="radio" name="age" value=3 {{ old('age') == 3 ? 'checked' : '' }}>40歳〜59歳</label><br />
+    <label><input type="radio" name="age" value=4 {{ old('age') == 4 ? 'checked' : '' }}>60歳以上</label><br />
   </p>
 
   @if ($errors->has('sex'))
@@ -24,8 +24,8 @@
   @endif
 
   <p>性別<br />
-    <label><input type="radio" name="sex" value=1>男性</label>
-    <label><input type="radio" name="sex" value=2>女性</label>
+    <label><input type="radio" name="sex" value=1 {{ old('sex') == 1 ? 'checked' : '' }}>男性</label>
+    <label><input type="radio" name="sex" value=2 {{ old('sex') == 2 ? 'checked' : '' }}>女性</label>
   </p>
 
   @if ($errors->has('status'))
@@ -44,7 +44,7 @@
   @endif
 
   <p>その他要望：<br>
-    <textarea name="other" cols="40" rows="8"></textarea>
+    <textarea name="other" cols="40" rows="8">{{ old('other') }}</textarea>
   </p>
 
   <input type="submit" value="送信する">
