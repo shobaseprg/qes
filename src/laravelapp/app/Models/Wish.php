@@ -11,6 +11,6 @@ class Wish extends Model
 
     public function respondent()
     {
-        return $this->belongsTo('Respondent');
+        return $this->belongsTo('App\Models\Respondent');
     }
 }

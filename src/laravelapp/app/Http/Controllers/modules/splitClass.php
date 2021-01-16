@@ -30,4 +30,26 @@ class SplitClass
         return "女性";
     }
   }
+
+  public static function checkWish($wishes)
+  {
+    $wishClassArray = [];
+    foreach ($wishes as $wish) {
+      switch ($wish->status) {
+        case 1:
+          array_push($wishClassArray, "新築一戸建て");
+          break;
+        case 2:
+          array_push($wishClassArray, "中古一戸建て");
+          break;
+        case 3:
+          array_push($wishClassArray, "マンション");
+          break;
+        case 4:
+          array_push($wishClassArray, "土地");
+          break;
+      }
+    }
+    return $wishClassArray;
+  }
 }

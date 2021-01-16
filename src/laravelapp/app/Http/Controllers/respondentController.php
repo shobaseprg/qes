@@ -16,9 +16,10 @@ class respondentController extends Controller
 
     public function show(Request $request)
     {
-        $targetRespondent = Respondent::where("id", $request->user_id)->first();
+        $targetRespondent = Respondent::find($request->user_id);
         $ageClass = SplitClass::checkAge($targetRespondent->age);
         $sexClass = SplitClass::checkSex($targetRespondent->sex);
-        return view('respondent.v_show', compact('targetRespondent', 'ageClass', 'sexClass'));
+        $wishClassArray = SplitClass::checkWish($targetRespondent->wishes()->get());
+        return view('respondent.v_show', compact('targetRespondent', 'ageClass', 'sexClass', 'wishClassArray'));
     }
 }

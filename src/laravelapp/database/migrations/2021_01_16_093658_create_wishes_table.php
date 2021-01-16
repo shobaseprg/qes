@@ -16,7 +16,7 @@ class CreateWishesTable extends Migration
         Schema::create('wishes', function (Blueprint $table) {
             $table->id();
             $table->integer('status');
-            $table->integer('user_id');
+            $table->integer('respondent_id');
             $table->timestamps();
         });
     }

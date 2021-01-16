@@ -19,6 +19,6 @@ class Respondent extends Model
 
     public function wishes()
     {
-        return $this->hasMany('Wish');
+        return $this->hasMany('App\Models\Wish');
     }
 }
