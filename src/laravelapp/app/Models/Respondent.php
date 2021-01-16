@@ -16,4 +16,9 @@ class Respondent extends Model
         'kind',
         'other'
     ];
+
+    public function wishes()
+    {
+        return $this->hasMany('Wish');
+    }
 }

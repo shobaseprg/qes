@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Wish extends Model
 {
     use HasFactory;
+
+    public function respondent()
+    {
+        return $this->belongsTo('Respondent');
+    }
 }
