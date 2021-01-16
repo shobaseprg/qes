@@ -17,7 +17,7 @@ class respondentSeeder extends Seeder
         DB::table('respondents')->insert(
             [
                 'name' => 'やまだ  たろう',
-                'age' => 20,
+                'age' => 2,
                 'sex' => 1,
                 'kind' => 1,
                 'other' => '特に無し',
@@ -27,7 +27,7 @@ class respondentSeeder extends Seeder
         DB::table('respondents')->insert(
             [
                 'name' => 'すずき  じろう',
-                'age' => 30,
+                'age' => 3,
                 'sex' => 1,
                 'kind' => 2,
                 'other' => '角部屋希望',
@@ -37,7 +37,7 @@ class respondentSeeder extends Seeder
         DB::table('respondents')->insert(
             [
                 'name' => 'たなか  はなこ',
-                'age' => 40,
+                'age' => 4,
                 'sex' => 2,
                 'kind' => 3,
                 'other' => '最上階希望',
