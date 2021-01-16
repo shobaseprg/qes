@@ -1,3 +1,11 @@
+@extends('layouts.base')
+
+@section('content')
+
+<div>
+  <a href="/index">一覧に戻る<a>
+</div>
+
 <form action="/store" method="post">
   @csrf
 
@@ -49,3 +57,4 @@
 
   <input type="submit" value="送信する">
 </form>
+@endsection
