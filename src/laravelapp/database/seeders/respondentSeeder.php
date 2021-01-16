@@ -19,7 +19,6 @@ class respondentSeeder extends Seeder
                 'name' => 'やまだ  たろう',
                 'age' => 2,
                 'sex' => 1,
-                'kind' => 1,
                 'other' => '特に無し',
                 'created_at' => date('Y-m-d H:i:s'),
             ]
@@ -29,7 +28,6 @@ class respondentSeeder extends Seeder
                 'name' => 'すずき  じろう',
                 'age' => 3,
                 'sex' => 1,
-                'kind' => 2,
                 'other' => '角部屋希望',
                 'created_at' => date('Y-m-d H:i:s'),
             ]
@@ -39,7 +37,6 @@ class respondentSeeder extends Seeder
                 'name' => 'たなか  はなこ',
                 'age' => 4,
                 'sex' => 2,
-                'kind' => 3,
                 'other' => '最上階希望',
                 'created_at' => date('Y-m-d H:i:s'),
             ]

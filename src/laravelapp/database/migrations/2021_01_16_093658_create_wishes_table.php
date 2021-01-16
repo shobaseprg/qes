@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRespondentsTable extends Migration
+class CreateWishesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateRespondentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('respondents', function (Blueprint $table) {
+        Schema::create('wishes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('age');
-            $table->integer('sex');
-            $table->text('other');
+            $table->integer('status');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateRespondentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('respondents');
+        Schema::dropIfExists('wishes');
     }
 }
