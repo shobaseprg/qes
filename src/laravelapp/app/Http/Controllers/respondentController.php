@@ -35,7 +35,7 @@ class respondentController extends Controller
             $request,
             Respondent::$validate_rule,
             [
-                "name.required" => "名前が未入力です",
+                "name.required" => "氏名が未入力です",
                 "age.required" => "年齢が未入力です",
                 "sex.required" => "性別が未入力です",
                 "status.required" => "希望物件が未入力です",
