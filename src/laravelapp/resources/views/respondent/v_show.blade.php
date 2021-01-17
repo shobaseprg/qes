@@ -24,7 +24,7 @@
 </p>
 
 <div>その他ご要望をご入力ください。</div>
-<p>{{$targetRespondent->other}}</p>
+<p>→{{$targetRespondent->other}}</p>
 
 <a class="btn btn-success" href="/" role="button">一覧に戻る</a>
 @endsection
