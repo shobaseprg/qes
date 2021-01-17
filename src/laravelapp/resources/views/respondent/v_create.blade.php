@@ -9,7 +9,7 @@
   @csrf
 
   <div>
-    <p>氏名を教えてください</p>
+    <p>氏名を教えてください。</p>
 
     <div class="error-msg">
       @if ($errors->has('name'))
@@ -32,7 +32,7 @@
       <option value=1 {{ old('age') == 1 ? 'selected' : '' }}>20歳未満</option>
       <option value=2 {{ old('age') == 2 ? 'selected' : '' }}>20歳〜39歳</option>
       <option value=3 {{ old('age') == 3 ? 'selected' : '' }}>40歳〜59歳</option>
-      <option value=3 {{ old('age') == 4 ? 'selected' : '' }}>60歳以上</option>
+      <option value=4 {{ old('age') == 4 ? 'selected' : '' }}>60歳以上</option>
     </select>
 
   </div></br></br>
