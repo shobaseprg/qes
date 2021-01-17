@@ -27,11 +27,14 @@
       {{$errors->first('age')}}
       @endif
     </div>
+    <select name="age">
+      <option hidden value=>---</option>
+      <option value=1 {{ old('age') == 1 ? 'selected' : '' }}>20歳未満</option>
+      <option value=2 {{ old('age') == 2 ? 'selected' : '' }}>20歳〜39歳</option>
+      <option value=3 {{ old('age') == 3 ? 'selected' : '' }}>40歳〜59歳</option>
+      <option value=3 {{ old('age') == 4 ? 'selected' : '' }}>60歳以上</option>
+    </select>
 
-    <label><input type="radio" name="age" value=1 {{ old('age') == 1 ? 'checked' : '' }}>20歳未満</label><br />
-    <label><input type="radio" name="age" value=2 {{ old('age') == 2 ? 'checked' : '' }}>20歳〜39歳</label><br />
-    <label><input type="radio" name="age" value=3 {{ old('age') == 3 ? 'checked' : '' }}>40歳〜59歳</label><br />
-    <label><input type="radio" name="age" value=4 {{ old('age') == 4 ? 'checked' : '' }}>60歳以上</label><br />
   </div></br></br>
 
   <div>
